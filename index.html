@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Birthday Invitation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #fff8fb 0%, #ffeef5 45%, #fffaf2 100%);
+      color: #4b2e39;
+      overflow-x: hidden;
+    }
+
+    .floating {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -30px;
+      font-size: 18px;
+      opacity: 0.18;
+      animation: rise 10s linear infinite;
+    }
+
+    .heart:nth-child(1) { left: 8%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 38%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 55%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 73%; animation-delay: 5s; }
+    .heart:nth-child(6) { left: 88%; animation-delay: 3s; }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.8); opacity: 0; }
+      10% { opacity: 0.2; }
+      100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px 0;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.75);
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(182, 107, 135, 0.16);
+      padding: 30px 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #fff0f5;
+      color: #b85c7a;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 14px;
+      color: #7a3750;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin: 0 0 14px;
+      color: #7a3750;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0 0 14px;
+    }
+
+    .name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #b85c7a;
+    }
+
+    .scroll-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f6a5c0, #e889a7);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(232, 137, 167, 0.28);
+    }
+
+    .section {
+      padding: 10px 0 18px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .detail-box {
+      background: #fff7fa;
+      border: 1px solid #ffdbe7;
+      border-radius: 20px;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .detail-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #b85c7a;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .detail-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #5a3442;
+      line-height: 1.6;
+    }
+
+    .quote {
+      margin-top: 12px;
+      padding: 16px;
+      border-left: 4px solid #ef9ab7;
+      background: #fff9fb;
+      border-radius: 16px;
+      font-style: italic;
+      color: #714555;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px 12px 12px;
+      color: #8f6272;
+      font-size: 0.95rem;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: #8d6876;
+    }
+
+    @media (min-width: 640px) {
+      .card { padding: 40px 34px; }
+      h1 { font-size: 2.7rem; }
+      h2 { font-size: 1.8rem; }
+      p { font-size: 1.05rem; }
+      .details { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating" aria-hidden="true">
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+    <div class="heart">❤</div>
+  </div>
+
+  <div class="container">
+    <section class="hero">
+      <div class="card">
+        <div class="tag">For Someone Very Special</div>
+        <h1>Selamat Ulang Tahun, <br><span class="name">Sayangku</span> ✨</h1>
+        <p>
+          Hari ini bukan sekadar tentang bertambahnya usia, tapi tentang merayakan seseorang yang begitu berarti,
+          yang hadirnya selalu membawa hangat, tenang, dan bahagia.
+        </p>
+        <p>
+          Terima kasih karena sudah menjadi bagian dari banyak cerita indah, menjadi alasan di balik senyum,
+          dan menjadi sosok yang selalu terasa spesial dalam setiap langkah.
+        </p>
+        <p>
+          Di hari istimewa ini, semoga semua hal baik datang menghampiri, semoga langkahmu selalu dipenuhi kebahagiaan,
+          kesehatan, cinta, dan banyak doa yang diam-diam sedang menuju kamu.
+        </p>
+        <a class="scroll-btn" href="#invitation">Lihat Kejutan Selanjutnya</a>
+      </div>
+    </section>
+
+    <section id="invitation" class="section">
+      <div class="card">
+        <div class="tag">Birthday Dinner Invitation</div>
+        <h2>Would You Join Me for a Sushi Date? 🍣</h2>
+        <p>
+          Sebagai bagian dari perayaan hari spesial kamu, aku ingin mengajak kamu menikmati malam yang sederhana,
+          hangat, dan manis — cuma kita berdua, berbagi cerita, tawa, dan momen indah sambil menikmati sushi favorit.
+        </p>
+        <p>
+          Jadi, lewat undangan kecil ini, aku ingin bilang:
+          <strong>maukah kamu menemani aku untuk dinner spesial ulang tahunmu dalam sebuah sushi date yang penuh cinta?</strong>
+        </p>
+
+        <div class="details">
+          <div class="detail-box">
+            <div class="detail-title">Hari & Tanggal</div>
+            <div class="detail-text">Sabtu, 14 Maret 2026</div>
+          </div>
+          <div class="detail-box">
+            <div class="detail-title">Waktu</div>
+            <div class="detail-text">18.00</div>
+          </div>
+          <div class="detail-box">
+            <div class="detail-title">Tempat</div>
+            <div class="detail-text">Tom Shusi Grand Galaxy Park.</div>
+          </div>
+          <div class="detail-box">
+            <div class="detail-title">Dress Code</div>
+            <div class="detail-text">Memakai dresscode terbaik</div>
+          </div>
+        </div>
+
+        <div class="quote">
+          “Aku tidak menjanjikan malam paling mewah, tapi aku ingin memastikan malam itu menjadi salah satu momen yang paling berkesan untukmu.”
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="tag">With Love</div>
+        <p>
+          Semoga undangan kecil ini bisa menjadi awal dari malam yang hangat, penuh cerita, dan penuh senyum.
+          Karena di hari spesialmu, yang paling ingin aku rayakan bukan hanya ulang tahunmu,
+          tapi juga kebahagiaanmu.
+        </p>
+        <p class="small">
+          Dari seseorang yang sangat bahagia bisa merayakan hari spesialmu. 💖
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      Made with love for a special birthday celebration.
+    </div>
+  </div>
+</body>
+</html>
